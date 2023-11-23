@@ -13,6 +13,21 @@ async function addDeal(accessToken, data) {
 	return res;
 }
 
+async function getUser(accessToken) {
+	const requestOptions = {
+		url: 'https://api.pipedrive.com/v1/users/me',
+		headers: {
+			'Authorization': `Bearer ${accessToken}`
+		},
+		timeout: 10000
+	};
+
+	const userInfo = await axios(requestOptions);
+
+	return userInfo.data;
+}
+
 module.exports = {
-	addDeal
+	addDeal,
+	getUser
 };

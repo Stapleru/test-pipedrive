@@ -6,7 +6,6 @@ const OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 const api = require('./api');
 const config = require('./config');
 const User = require('./db/user');
-const customField = require('./custom-fields');
 const bodyParser = require('body-parser');
 
 User.createTable();
@@ -70,7 +69,6 @@ app.get('/', async (req, res) => {
 app.post('/deal', async (req, res) => {
 	try {
 		const newDeal = await api.addDeal(req.user[0].access_token, {title: `JOB #${Math.floor(Math.random() * (999999 + 1))}`, ...req.body});
-		console.log(newDeal.data.data.id);
 		return res.render('success', { id: newDeal.data.data.id });
 	} catch (error) {
 		console.log(error)

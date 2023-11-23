@@ -4,40 +4,56 @@
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
-        <form action="deal" method="post">
+        <form action="deal" method="post" class="container">
 
-
-            <input type="text" name="5ff7b15c6e67519ae4de0f8f2c13f3842554774d" required>
-            <input type="text" name="c43b09bb06a2aa90abea6e4e13ae95e4fbdc1c2b" >
-            <input type="tel" name="de8d0703f8553a5d3f5635038363a8eac536c20b" >
-            <input type="email" name="7d5d8353d8267862a3acf41c9d88b6977c9c28b0">
-
-            <select name="6e06e89fa30ee1a3e95f72a10af3422c310712e9" >
-                <option value="type1">type1</option>
-                <option value="type2">type2</option>
-            </select>
-            <select name="c102771097e6243027a9a8be2a7991473c23597c" >
-                <option value="type1">type1</option>
-                <option value="type2">type2</option>
-            </select>
-            <input type="text" name="16df611494f85f20551fe75f4726eeee8082ad2e">
-
-            <input type="text" name="14557cb4b3231f39ae1367621f967f50ae8805d0" >
-            <input type="text" name="6abb83b1135152c442cf6610e4204b98bec46f45" >
-            <input type="text" name="43d82676ab5dc7fab88c88a674b50fbfe16c025b" >
-            <input type="text" name="829b05788eac94d30984200502c51d3b00cdd4d0" >
-            <select name="53f28a76d1f7593ab761a81b09d1f1eb63325cb1" >
-                <option value="type1">type1</option>
-                <option value="type2">type2</option>
-            </select>
-
-            <input type="date" name="9eab5617d866896e5bbd6c85055a49d80c8cf8f2" >
-            <input type="time" name="2ac14356adee6bffe86293cc764dc3ea186f5757" >
-            <input type="time" name="426dabeacfb10f0618725fb88f54516ec9ffb5cd" >
-            <select name="16136605dab77d2cd38e22feddc1d19977f1dbf6" >
-                <option value="type1">type1</option>
-                <option value="type2">type2</option>
-            </select>
+            <div class="block">
+                <h1 id="full-width">Client details</h1>
+                <input type="text" name="5ff7b15c6e67519ae4de0f8f2c13f3842554774d" required placeholder="First name">
+                <input type="text" name="c43b09bb06a2aa90abea6e4e13ae95e4fbdc1c2b" placeholder="Last name">
+                <input type="tel" name="de8d0703f8553a5d3f5635038363a8eac536c20b" placeholder="Phone" id="full-width">
+                <input type="email" name="7d5d8353d8267862a3acf41c9d88b6977c9c28b0" placeholder="Email (optional)" id="full-width">  
+            </div>
+            
+            <div class="block">
+                <h1 id="full-width">Job details</h1>
+                <select name="6e06e89fa30ee1a3e95f72a10af3422c310712e9">
+                    <option value="" disabled selected>Job type</option>
+                    <option value="type1">type1</option>
+                    <option value="type2">type2</option>
+                </select>
+                <select name="c102771097e6243027a9a8be2a7991473c23597c">
+                    <option value="" disabled selected>Job source</option>
+                    <option value="type1">type1</option>
+                    <option value="type2">type2</option>
+                </select>
+                <input type="text" name="16df611494f85f20551fe75f4726eeee8082ad2e" placeholder="Job description (optional)" id="full-width">
+            </div>
+            
+            <div class="block">
+                <h1 id="full-width">Service location</h1>
+                <input type="text" name="14557cb4b3231f39ae1367621f967f50ae8805d0" placeholder="Address" id="full-width">
+                <input type="text" name="6abb83b1135152c442cf6610e4204b98bec46f45" placeholder="City" id="full-width">
+                <input type="text" name="43d82676ab5dc7fab88c88a674b50fbfe16c025b" placeholder="State" id="full-width">
+                <input type="text" name="829b05788eac94d30984200502c51d3b00cdd4d0" placeholder="Zip code">
+                <select name="53f28a76d1f7593ab761a81b09d1f1eb63325cb1">
+                    <option value="" disabled selected>Area</option>
+                    <option value="type1">type1</option>
+                    <option value="type2">type2</option>
+                </select>
+            </div>
+            
+            <div class="block">
+                <h1 id="full-width">Scheduled</h1>
+                <input type="date" name="9eab5617d866896e5bbd6c85055a49d80c8cf8f2" placeholder="Start date" id="full-width">
+                <input type="time" name="2ac14356adee6bffe86293cc764dc3ea186f5757" placeholder="Start time">
+                <input type="time" name="426dabeacfb10f0618725fb88f54516ec9ffb5cd" placeholder="End time">
+                <select name="16136605dab77d2cd38e22feddc1d19977f1dbf6" id="full-width">
+                    <option value="" disabled selected>Test select</option>
+                    <option value="type1">type1</option>
+                    <option value="type2">type2</option>
+                </select>
+            </div>
+            
 
             <button type="submit">Submit</button>
         </form>
